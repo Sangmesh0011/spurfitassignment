@@ -2,11 +2,11 @@ import React from 'react'
 
 const LandingPage = () => {
   return (
-    <div className='rounded-3xl bg-purple-100 h-[100vh] w-full flex justify-center items-center gap-4 p-10'>
+    <div className='rounded-3xl bg-[#eeeaff] h-[100vh] w-full flex justify-center items-center gap-4 p-10'>
         <section className='hidden border-dotted border-2 border-black w-[400px] h-[400px] rounded-full absolute right-[130px] top-[30%]'></section>
       <div className="flex flex-col w-1/2">
         <span>Ahead app</span>
-        <strong style={{lineHeight:"60px"}} className='text-[58px] ml-[-5px]'>Master your life my mastering Emotions</strong>
+        <strong style={{lineHeight:"60px"}} className='text-[58px] w-[500px] ml-[-5px]'>Master your life by mastering Emotions</strong>
         <div className="flex items-center gap-6">
         <img className='w-28 my-6' src='/download-on-the-app-store.svg' alt='Get App On App Store'></img>
         <div className="flex flex-col">

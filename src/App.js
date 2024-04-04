@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { AiFillMail } from "react-icons/ai";
+import { ImLocation } from "react-icons/im";
 import Button from "./components/Button";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import Meet from "./components/Meet";
 import Steps from "./components/Steps";
 import Wonder from "./components/Wonder";
+import Work from "./components/Work";
 import emotionsData from "./res/emotionsData";
 
 function App() {
@@ -90,7 +93,7 @@ function App() {
       <Wonder/>
 
 
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center mb-48">
           <span className="text-lg">We take privacy seriously</span>
           <span className="text-3xl font-bold">Before you get started</span>
           <br />
@@ -102,6 +105,56 @@ function App() {
             <span className="text-slate-600 text-xs mt-[-10px]">Takes only 5 minutes</span>
         </div>
 
+
+        <Work/>
+
+
+            <div className="vacancies mt-36 mb-36">
+            <h2 className="text-6xl text-yellow-700 mb-14">Open vacancies</h2>
+            <div className="flex justify-center items-center gap-12">
+              <div className="job w-[25vw] h-[300px] bg-[#fffbed] rounded-2xl flex flex-col p-10">
+                <span className="text-3xl mb-10">Senior Full-Stack Engineer</span>
+                <ol>
+                  <li>1. Full Time Position</li>
+                  <li>2. Berlin or remote</li>
+                  <li>3. $65-85k, 0.5-1.50% equity share options</li>
+                </ol>
+              </div>
+              <div className="job w-[25vw] h-[300px] bg-[#fffbed] rounded-2xl flex flex-col p-10">
+                <span className="text-3xl mb-10">Senior Full-Stack Engineer</span>
+                <ol>
+                  <li>1. Full Time Position</li>
+                  <li>2. Berlin or remote</li>
+                  <li>3. $65-85k, 0.5-1.50% equity share options</li>
+                </ol>
+              </div>
+              <div className="job w-[25vw] h-[300px] bg-[#fffbed] rounded-2xl flex flex-col p-10">
+                <span className="text-3xl mb-10">Senior Full-Stack Engineer</span>
+                <ol>
+                  <li>1. Full Time Position</li>
+                  <li>2. Berlin or remote</li>
+                  <li>3. $65-85k, 0.5-1.50% equity share options</li>
+                </ol>
+              </div>
+
+            </div>
+            </div>
+
+
+            <section className="w-screen h-1 bg-slate-500"></section>
+
+
+            <div className="footer p-12 flex flex-col justify-center items-center gap-10">
+              <img src="/ahead.jpg" alt="ahead" />
+              <div className="flex justify-center items-center gap-12">
+                <span className="flex justify-center items-center gap-1"><ImLocation />AuguststraBe 26, 10117 Berlin</span>
+                <span className="flex justify-center items-center gap-1"><AiFillMail />hi@ahead-app.com</span>
+              </div>
+              <img src="download-on-the-app-store.svg" alt="AppStore" />
+              
+            </div>
+
+            
       </div>
 
 
