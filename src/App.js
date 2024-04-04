@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
+import Meet from "./components/Meet";
 import emotionsData from "./res/emotionsData";
 
 function App() {
@@ -36,9 +37,7 @@ function App() {
 
         <div className="flex items-center mb-16">
           <div
-   
-            
-            id="scroller"
+          id="scroller"
             className="w-[80vw] h-full overflow-x-auto scroll-smooth whitespace-nowrap scrollbar-hide"
           >
             {emotionsData.map((item, index) => {
@@ -65,8 +64,13 @@ function App() {
               );
             })}
           </div>
+
         </div>
+          <Meet/>
       </div>
+
+
+
     </div>
   );
 }
