@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import React from "react";
+import Button from "./components/Button";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import Meet from "./components/Meet";
+import Steps from "./components/Steps";
+import Wonder from "./components/Wonder";
 import emotionsData from "./res/emotionsData";
 
 function App() {
@@ -67,8 +70,39 @@ function App() {
 
         </div>
           <Meet/>
-      </div>
+          <Steps/>
 
+          <div className="p-14 flex justify-evenly items-center mt-72 gap-8 my-8 mb-60">
+          <strong className="w-1/3 text-3xl">Be the best with EQ</strong>
+          <span
+            style={{ wordBreak: "normal" }}
+            className="w-1/4 text-gray-500 font-semibold"
+          >
+            Not having your own emotions under control might be holding you back.
+          </span>
+          <span
+            style={{ wordBreak: "normal" }}
+            className="w-1/4 text-gray-500 font-semibold"
+          >
+            Additionally, not understanding those of others stops you from being parent, friend you can be.
+          </span>
+        </div>
+      <Wonder/>
+
+
+        <div className="flex flex-col justify-center items-center">
+          <span className="text-lg">We take privacy seriously</span>
+          <span className="text-3xl font-bold">Before you get started</span>
+          <br />
+          <span className="text-slate-500 w-[600px] text-center">"We will not share your answers with anyone (and will never tell you which friends said what about you!)"</span>
+            <br />
+            <span>with love, ahead</span>
+            <br />
+            <Button text="Start a test"/><br />
+            <span className="text-slate-600 text-xs mt-[-10px]">Takes only 5 minutes</span>
+        </div>
+
+      </div>
 
 
     </div>
