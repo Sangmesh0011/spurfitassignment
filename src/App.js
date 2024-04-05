@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { AiFillMail } from "react-icons/ai";
 import { ImLocation } from "react-icons/im";
+import { useInView } from "react-intersection-observer";
 import Button from "./components/Button";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
@@ -12,28 +13,59 @@ import Work from "./components/Work";
 import emotionsData from "./res/emotionsData";
 
 function App() {
+  const { ref:r1, inView:iv1 } = useInView();
+  const { ref:r2, inView:iv2 } = useInView();
+  const { ref:r3, inView:iv3 } = useInView();
+  const { ref:r4, inView:iv4 } = useInView();
+  const { ref:r5, inView:iv5 } = useInView();
+  const { ref:r6, inView:iv6 } = useInView();
+
+
+
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: -100,rotateX:50 },
+    visible: { opacity: 1, y: 0,rotateX:0 },
+  };
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-hidden">
       <Header />
       <div className="flex flex-col justify-center items-center px-8">
         <LandingPage />
 
-        <div className="p-14 flex justify-evenly items-center gap-8 my-8">
-          <strong className="w-1/3 text-3xl">EQ beats IQ</strong>
-          <span
+        <div
+        className="p-14 flex justify-evenly items-center gap-8 my-8">
+          <motion.strong className="w-1/3 text-3xl"
+          ref={r1}
+          variants={containerVariants}
+          initial="hidden"
+          animate={iv1 ? "visible" : "hidden"}
+          transition={{ duration: 0.6, delay: 0.1, type: "spring", stiffness: 300, damping: 20, overshootClamping: true }}>EQ beats IQ</motion.strong>
+          <motion.span
+          ref={r2}
+          variants={containerVariants}
+          initial="hidden"
+          animate={iv2 ? "visible" : "hidden"}
+          transition={{ duration: 0.6, delay: 0.1,type: "spring", stiffness: 300, damping: 20, overshootClamping: true }}
             style={{ wordBreak: "normal" }}
             className="w-1/4 text-gray-500 font-semibold"
           >
             People with high emotional intelligence (EQ) live more fulfilled
             lives.They tend to be happier and have healthier relationships.
-          </span>
-          <span
+          </motion.span>
+          <motion.span
+          ref={r3}
+          variants={containerVariants}
+          initial="hidden"
+          animate={iv3 ? "visible" : "hidden"}
+          transition={{ duration: 0.6, delay: 0.1,type: "spring", stiffness: 300, damping: 20, overshootClamping: true }}
             style={{ wordBreak: "normal" }}
             className="w-1/4 text-gray-500 font-semibold"
           >
             They are more successful in their pursuits and make for inspiring
             leaders.According to science,they earn $29k a year.
-          </span>
+          </motion.span>
         </div>
 
         <strong className="text-4xl ml-[-580px] mb-14 flex gap-6">
@@ -75,20 +107,33 @@ function App() {
           <Meet/>
           <Steps/>
 
-          <div className="p-14 flex justify-evenly items-center mt-72 gap-8 my-8 mb-60">
-          <strong className="w-1/3 text-3xl">Be the best with EQ</strong>
-          <span
+          <div className="p-14 flex justify-evenly items-center mt-72 gap-8 my-8 mb-32">
+          <motion.strong 
+          ref={r4}
+          initial={{x:-200}}
+          animate={{x:iv4?0:-200}}
+          transition={{ duration: 1.2, delay: 0.1,type: "spring", stiffness: 300, damping: 20, overshootClamping: true }}
+          className="w-1/3 text-3xl">Be the best with EQ</motion.strong>
+          <motion.span
+          ref={r5}
+          initial={{y:-100}}
+          animate={{y:iv5?0:-100}}
+          transition={{ duration: 1.2, delay: 0.1,type: "spring", stiffness: 300, damping: 20, overshootClamping: true }}
             style={{ wordBreak: "normal" }}
             className="w-1/4 text-gray-500 font-semibold"
           >
             Not having your own emotions under control might be holding you back.
-          </span>
-          <span
+          </motion.span>
+          <motion.span
+          ref={r6}
+          initial={{x:200}}
+          animate={{x:iv6?0:200}}
+          transition={{ duration: 1.2, delay: 0.1,type: "spring", stiffness: 300, damping: 20, overshootClamping: true }}
             style={{ wordBreak: "normal" }}
             className="w-1/4 text-gray-500 font-semibold"
           >
             Additionally, not understanding those of others stops you from being parent, friend you can be.
-          </span>
+          </motion.span>
         </div>
       <Wonder/>
 

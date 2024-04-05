@@ -1,6 +1,10 @@
+import { motion } from "framer-motion";
 import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Steps = () => {
+  const { ref:r1, inView:iv1 } = useInView();
+  const { ref:r2, inView:iv2 } = useInView();
 
       function highlightAuto(index) {
         const dots = document.querySelectorAll('.dot');
@@ -23,7 +27,7 @@ const Steps = () => {
         const nextIndex = (index + 1) % dots.length;
          setTimeout(() => {
             highlightAuto(nextIndex);
-        }, 2400);
+        }, 1600);
     }
     
     useEffect(() => {        
@@ -36,12 +40,23 @@ const Steps = () => {
     
   return (
     <div className="mt-28 flex flex-col w-[85%] p-12 h-[110vh]">
-      <img className="w-8 absolute right-96" src="/Insect2.png" alt="." />
+      <motion.img 
+      ref={r2}
+      initial={{x:100,rotateZ:360}}
+      animate={{rotateZ:iv2?0:150,x:iv2?0:100}}
+      transition={{duration:2,delay:0.2,type: "spring", stiffness: 300, damping: 20, overshootClamping: true}}
+      className="w-8 absolute right-96" src="/Insect2.png" alt="." />
       <div className="flex flex-col justify-start items-start">
-        <span className="text-xl">
+        <span 
+         className="text-xl">
           Wrong with self-improvement and how we're fixing it.
         </span>
-        <h2 className="text-6xl font-bold mt-4">Self-Improvement. Ugh.</h2>
+        <motion.h2
+        ref={r1}
+        initial={{opacity:0,y:-10,scale:0}}
+        animate={{opacity:iv1?1:0,y:iv1?0:-400,scale:iv1?1:0}}
+        transition={{duration:2,delay:0.2,type: "spring", stiffness: 300, damping: 20, overshootClamping: true}}
+        className="text-6xl font-bold mt-4">Self-Improvement. Ugh.</motion.h2>
       </div>
       <div className="flex flex-col justify-center items-center mt-24 space-y-10">
         <section className="h-[470px] w-2 bg-blue-500 absolute mt-6 ml-[-535px] -z-50"></section>
