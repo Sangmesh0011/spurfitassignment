@@ -1,3 +1,12 @@
+Live at   -   https://spurassignment.netlify.app/
+
+# Welcome to the repo!
+# I have used ReactJS and the "framer - motion" library for smooth animations.
+# As for resources, I used Figma to make my own drawings.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
