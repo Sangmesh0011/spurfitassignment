@@ -7,7 +7,7 @@ const Steps = () => {
   const { ref:r2, inView:iv2 } = useInView();
 
       
-      function highlightAuto(index) {
+      function highlight(index) {
         const dots = document.querySelectorAll('.dot');
         const dataAll = document.querySelectorAll('.data');
     
@@ -52,10 +52,10 @@ const Steps = () => {
       </div>
       <div className="flex flex-col justify-center items-center mt-24 space-y-10">
         <section className="h-[470px] w-2 bg-blue-500 absolute mt-6 ml-[-535px] -z-50"></section>
-        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlightAuto(0)}>
+        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlight(0)}>
           <div className="dot w-6 h-6 rounded-full bg-blue-500"></div>
           <div
-            className="data flex flex-col justify-normal items-start gap-4 w-[600px]"
+            className="data flex flex-col justify-normal items-start gap-4 w-[600px] opacity-40"
           >
             <span className="font-bold text-xl w-96">It is not easy as 1-2-3.</span>
             <span className="w-96">
@@ -66,10 +66,10 @@ const Steps = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlightAuto(1)}>
+        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlight(1)}>
           <div className="dot w-6 h-6 rounded-full bg-blue-500"></div>
           <div
-            className="data flex flex-col justify-normal items-start gap-4 w-[600px]"
+            className="data flex flex-col justify-normal items-start gap-4 w-[600px] opacity-40"
           >
             <span className="font-bold text-xl w-96">Old habits are hard to break.</span>
             <span  className="w-96">
@@ -78,10 +78,10 @@ const Steps = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlightAuto(2)}>
+        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlight(2)}>
           <div className="dot w-6 h-6 rounded-full bg-blue-500"></div>
           <div
-            className="data flex flex-col justify-normal items-start gap-4 w-[600px]"
+            className="data flex flex-col justify-normal items-start gap-4 w-[600px] opacity-40"
           >
             <span className="font-bold text-xl w-96">You and you motivation don not have a long term relationship.</span>
             <span  className="w-96">
@@ -90,10 +90,10 @@ const Steps = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlightAuto(3)}>
+        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlight(3)}>
           <div className="dot w-6 h-6 rounded-full bg-blue-500"></div>
           <div
-            className="data flex flex-col justify-normal items-start gap-4 w-[600px]"
+            className="data flex flex-col justify-normal items-start gap-4 w-[600px] opacity-40"
           >
             <span className="font-bold text-xl w-96">It is not easy as 1-2-3.</span>
             <span  className="w-96">
