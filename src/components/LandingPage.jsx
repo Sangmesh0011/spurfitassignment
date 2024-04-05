@@ -19,6 +19,17 @@ const LandingPage = () => {
 
   return (
     <div className='rounded-3xl bg-[#eeeaff] h-[100vh] w-full flex justify-center items-center gap-4 p-10' ref={containerRef}>
+        <motion.img
+         initial={{x:0,rotateY:"0deg"}}
+      animate={{x:1,rotateZ:"360deg"}}
+      transition={{duration:1,repeat:Infinity,repeatType:"reverse",delay:0}}
+      className='absolute top-[30%] left-[66%] w-16' src="/Semi1.png" alt="." />
+      <motion.img
+         initial={{x:0,rotateY:"120deg"}}
+      animate={{x:1,rotateZ:"320deg"}}
+      transition={{duration:0.4,repeat:Infinity,repeatType:"loop",delay:0}}
+      className='absolute top-[50%] left-[86%] w-16' src="/Semi1.png" alt="." />
+        
         <section className='hidden border-dotted border-2 border-black w-[400px] h-[400px] rounded-full absolute right-[130px] top-[30%]'></section>
       <div className="flex flex-col w-1/2">
         <motion.span 
@@ -50,7 +61,7 @@ const LandingPage = () => {
         initial="v1"
         animate={inView ? "v2" : "v1"}
         transition={{ duration: 1, delay: 0.6, ease: easeInOut }} className="flex items-center gap-6">
-        <img className='w-28 my-6' src='/download-on-the-app-store.svg' alt='Get App On App Store'></img>
+        <img className='w-28 my-6 cursor-pointer' src='/download-on-the-app-store.svg' alt='Get App On App Store'></img>
         <div className="flex flex-col">
             <img className='h-5 w-24' src="/Stars.png" alt="stars" />
             <span className='text-sm'>100+ AppStore Reviews</span>

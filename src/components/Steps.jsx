@@ -27,7 +27,7 @@ const Steps = () => {
         const nextIndex = (index + 1) % dots.length;
          setTimeout(() => {
             highlightAuto(nextIndex);
-        }, 1600);
+        }, 800);
     }
     
     useEffect(() => {        

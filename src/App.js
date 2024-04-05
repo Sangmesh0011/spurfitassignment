@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import React from "react";
 import { AiFillMail } from "react-icons/ai";
 import { ImLocation } from "react-icons/im";
@@ -19,6 +19,15 @@ function App() {
   const { ref:r4, inView:iv4 } = useInView();
   const { ref:r5, inView:iv5 } = useInView();
   const { ref:r6, inView:iv6 } = useInView();
+  const { ref:r7, inView:iv7 } = useInView();
+  const { ref:r8, inView:iv8 } = useInView();
+  const { ref:r9, inView:iv9 } = useInView();
+  const { ref:r10, inView:iv10 } = useInView();
+  const { ref:r11, inView:iv11 } = useInView();
+  const { ref:r12, inView:iv12 } = useInView();
+  const { ref:r13, inView:iv13 } = useInView();
+  const { ref:r14, inView:iv14 } = useInView();
+  const { ref:r15, inView:iv15 } = useInView();
 
 
 
@@ -138,16 +147,50 @@ function App() {
       <Wonder/>
 
 
+
         <div className="flex flex-col justify-center items-center mb-48">
-          <span className="text-lg">We take privacy seriously</span>
-          <span className="text-3xl font-bold">Before you get started</span>
+          <motion.span 
+          ref={r7}
+          initial={{opacity:0}}
+          animate={{opacity:iv7?100:0}}
+          transition={{ duration: 1, delay: 0.3,easeInOut}}
+          className="text-lg">We take privacy seriously</motion.span>
+          <motion.span
+          ref={r8}
+          initial={{opacity:0}}
+          animate={{opacity:iv8?100:0}}
+          transition={{ duration: 1, delay: 0.5,easeInOut}}
+          className="text-3xl font-bold">Before you get started</motion.span>
           <br />
-          <span className="text-slate-500 w-[600px] text-center">"We will not share your answers with anyone (and will never tell you which friends said what about you!)"</span>
+          <motion.span 
+          ref={r9}
+          initial={{opacity:0}}
+          animate={{opacity:iv9?100:0}}
+          transition={{ duration: 1, delay: 0.7,easeInOut}}
+          className="text-slate-500 w-[600px] text-center">"We will not share your answers with anyone (and will never tell you which friends said what about you!)"</motion.span>
             <br />
-            <span>with love, ahead</span>
+            <motion.span
+            ref={r10}
+            initial={{opacity:0}}
+            animate={{opacity:iv10?100:0}}
+            transition={{ duration: 1, delay: 0.9,easeInOut}}
+            >with love, ahead</motion.span>
             <br />
-            <Button text="Start a test"/><br />
-            <span className="text-slate-600 text-xs mt-[-10px]">Takes only 5 minutes</span>
+            <motion.div
+            ref={r11}
+            initial={{opacity:0}}
+            animate={{opacity:iv11?100:0}}
+            transition={{ duration: 1, delay: 1.1,easeInOut}}
+            className="cursor-pointer">
+            <Button text="Start a test"/>
+            </motion.div>
+            <br />
+            <motion.span
+            ref={r12}
+            initial={{opacity:0}}
+            animate={{opacity:iv12?100:0}}
+            transition={{ duration: 1, delay: 1.3,easeInOut}}
+            className="text-slate-600 text-xs mt-[-10px]">Takes only 5 minutes</motion.span>
         </div>
 
 
@@ -157,36 +200,51 @@ function App() {
             <div className="vacancies mt-36 mb-36">
             <h2 className="text-6xl text-yellow-700 mb-14">Open vacancies</h2>
             <div className="flex justify-center items-center gap-12">
-              <div className="job w-[25vw] h-[300px] bg-[#fffbed] rounded-2xl flex flex-col p-10">
+              <motion.div
+              ref={r13} 
+              initial={{y:30}}
+              animate={{y:iv13?0:30}}
+              transition={{duration:0.4,delay:0.1}}
+              className="job w-[25vw] h-[300px] bg-[#fffbed] rounded-2xl flex flex-col p-10">
                 <span className="text-3xl mb-10">Senior Full-Stack Engineer</span>
                 <ol>
                   <li>1. Full Time Position</li>
                   <li>2. Berlin or remote</li>
                   <li>3. $65-85k, 0.5-1.50% equity share options</li>
                 </ol>
-              </div>
-              <div className="job w-[25vw] h-[300px] bg-[#fffbed] rounded-2xl flex flex-col p-10">
-                <span className="text-3xl mb-10">Senior Full-Stack Engineer</span>
+              </motion.div>
+              <motion.div 
+              ref={r14} 
+              initial={{y:30}}
+              animate={{y:iv14?0:30}}
+              transition={{duration:0.4,delay:0.3}}
+              className="job w-[25vw] h-[300px] bg-[#fffbed] rounded-2xl flex flex-col p-10">
+                <span className="text-3xl mb-10">Backend Inten</span>
+                <ol>
+                  <li>1. Full Time Position</li>
+                  <li>2. Remote</li>
+                  <li>3. $15k, 0.5-1.50% equity share options</li>
+                </ol>
+              </motion.div>
+              <motion.div 
+              ref={r15} 
+              initial={{y:30}}
+              animate={{y:iv15?0:30}}
+              transition={{duration:0.4,delay:0.5}}
+              className="job w-[25vw] h-[300px] bg-[#fffbed] rounded-2xl flex flex-col p-10">
+                <span className="text-3xl mb-10">Senior AI Engineer</span>
                 <ol>
                   <li>1. Full Time Position</li>
                   <li>2. Berlin or remote</li>
                   <li>3. $65-85k, 0.5-1.50% equity share options</li>
                 </ol>
-              </div>
-              <div className="job w-[25vw] h-[300px] bg-[#fffbed] rounded-2xl flex flex-col p-10">
-                <span className="text-3xl mb-10">Senior Full-Stack Engineer</span>
-                <ol>
-                  <li>1. Full Time Position</li>
-                  <li>2. Berlin or remote</li>
-                  <li>3. $65-85k, 0.5-1.50% equity share options</li>
-                </ol>
-              </div>
+              </motion.div>
 
             </div>
             </div>
 
 
-            <section className="w-screen h-1 bg-slate-500"></section>
+            <section className="w-screen h-[1px] bg-slate-500"></section>
 
 
             <div className="footer p-12 flex flex-col justify-center items-center gap-10">
