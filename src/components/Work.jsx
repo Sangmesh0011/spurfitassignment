@@ -8,9 +8,7 @@ const Work = () => {
   const { ref:r2, inView:iv2 } = useInView();
   const { ref:r3, inView:iv3 } = useInView();
   const { ref:r4, inView:iv4 } = useInView();
-  const { ref:r5, inView:iv5 } = useInView();
-  const { ref:r6, inView:iv6 } = useInView();
-  
+
   
   return (
     <div className="flex flex-col justify-center items-center px-12 py-14 w-[98%] h-[140vh] bg-[#f2f0ff]">

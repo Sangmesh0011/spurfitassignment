@@ -6,6 +6,9 @@ const Steps = () => {
   const { ref:r1, inView:iv1 } = useInView();
   const { ref:r2, inView:iv2 } = useInView();
 
+    
+    useEffect(() => {     
+      
       function highlightAuto(index) {
         const dots = document.querySelectorAll('.dot');
         const dataAll = document.querySelectorAll('.data');
@@ -28,9 +31,7 @@ const Steps = () => {
          setTimeout(() => {
             highlightAuto(nextIndex);
         }, 800);
-    }
-    
-    useEffect(() => {        
+    }   
       return () => {
         highlightAuto(0);
       }
