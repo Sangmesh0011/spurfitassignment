@@ -1,13 +1,11 @@
 import { motion } from "framer-motion";
-import React, { useEffect } from "react";
+import React from "react";
 import { useInView } from "react-intersection-observer";
 
 const Steps = () => {
   const { ref:r1, inView:iv1 } = useInView();
   const { ref:r2, inView:iv2 } = useInView();
 
-    
-    useEffect(() => {     
       
       function highlightAuto(index) {
         const dots = document.querySelectorAll('.dot');
@@ -27,15 +25,8 @@ const Steps = () => {
         });
     
         dots[index].classList.add('bg-blue-800', 'w-12', 'h-12', 'transition-all', 'duration-2', 'ease-in-out');
-        const nextIndex = (index + 1) % dots.length;
-         setTimeout(() => {
-            highlightAuto(nextIndex);
-        }, 800);
     }   
-      return () => {
-        highlightAuto(0);
-      }
-    }, [])
+ 
     
     
     
@@ -61,10 +52,10 @@ const Steps = () => {
       </div>
       <div className="flex flex-col justify-center items-center mt-24 space-y-10">
         <section className="h-[470px] w-2 bg-blue-500 absolute mt-6 ml-[-535px] -z-50"></section>
-        <div className="flex justify-center items-center gap-24 ml-40">
+        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlightAuto(0)}>
           <div className="dot w-6 h-6 rounded-full bg-blue-500"></div>
           <div
-            className="data flex flex-col justify-normal items-start gap-4 w-[600px] opacity-40"
+            className="data flex flex-col justify-normal items-start gap-4 w-[600px]"
           >
             <span className="font-bold text-xl w-96">It is not easy as 1-2-3.</span>
             <span className="w-96">
@@ -75,7 +66,7 @@ const Steps = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-24 ml-40">
+        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlightAuto(1)}>
           <div className="dot w-6 h-6 rounded-full bg-blue-500"></div>
           <div
             className="data flex flex-col justify-normal items-start gap-4 w-[600px]"
@@ -87,7 +78,7 @@ const Steps = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-24 ml-40">
+        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlightAuto(2)}>
           <div className="dot w-6 h-6 rounded-full bg-blue-500"></div>
           <div
             className="data flex flex-col justify-normal items-start gap-4 w-[600px]"
@@ -99,7 +90,7 @@ const Steps = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-24 ml-40">
+        <div className="flex justify-center items-center gap-24 ml-40 cursor-pointer" onClick={()=>highlightAuto(3)}>
           <div className="dot w-6 h-6 rounded-full bg-blue-500"></div>
           <div
             className="data flex flex-col justify-normal items-start gap-4 w-[600px]"
