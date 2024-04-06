@@ -29,9 +29,6 @@ function App() {
   const { ref:r14, inView:iv14 } = useInView();
   const { ref:r15, inView:iv15 } = useInView();
 
-
-
-
   const containerVariants = {
     hidden: { opacity: 0, y: -100,rotateX:50 },
     visible: { opacity: 1, y: 0,rotateX:0 },
@@ -197,7 +194,7 @@ function App() {
         <Work/>
 
 
-            <div className="vacancies mt-36 mb-36">
+            <div id="work" className="vacancies mt-36 mb-36">
             <h2 className="text-6xl text-yellow-700 mb-14">Open vacancies</h2>
             <div className="flex justify-center items-center gap-12">
               <motion.div

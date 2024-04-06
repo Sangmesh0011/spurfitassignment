@@ -31,7 +31,7 @@ const Steps = () => {
     
     
   return (
-    <div className="mt-28 flex flex-col w-[85%] p-12 h-[110vh]">
+    <div id="selfaw" className="mt-28 flex flex-col w-[85%] p-12 h-[110vh]">
       <motion.img 
       ref={r2}
       initial={{x:100,rotateZ:360}}

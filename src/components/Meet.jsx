@@ -11,7 +11,7 @@ const Meet = () => {
 
 
   return (
-    <div className='bg-[#fff7f1] rounded-2xl w-[86%] h-[90vh] mt-16 py-32 px-14 mb-10'>
+    <div id="meet" className='bg-[#fff7f1] rounded-2xl w-[86%] h-[90vh] mt-16 py-32 px-14 mb-10'>
         <motion.img 
         ref={r1}
         initial={{rotateZ:0}}
